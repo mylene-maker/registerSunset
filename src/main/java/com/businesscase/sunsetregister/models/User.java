@@ -39,6 +39,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles;
 
+//    test
     public User(String lastname, String firstname, String email, String country, String password, String confirmPassword) {
         this.roles = new ArrayList<Role>();
         this.lastname = lastname;

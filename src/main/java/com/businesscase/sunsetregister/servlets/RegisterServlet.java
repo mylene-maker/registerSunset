@@ -79,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
     }
-
+// ceci est un test
     public void destroy() {
     }
 }
