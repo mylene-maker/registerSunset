@@ -1,10 +1,8 @@
 package com.businesscase.sunsetregister.models;
 
-import com.businesscase.sunsetregister.interfaces.RegisterGroup;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +25,15 @@ public class User {
     private String email;
     @NotBlank(message = "Selectionner votre pays de résidence")
     private String country;
+
+//    @NotBlank(message= "Entrez le numero de rue")
+    private int street_number;
+
+    @NotBlank(message= "Entrez le nom de la rue")
+    private String street_name;
+
+//    @NotBlank(message= "Entrez le code postal")
+    private String zip_code;
     @NotBlank(message = "Indiquer un mot de passe")
 //    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$") //Minimum eight characters, at least one letter and one number
     private String password;
@@ -40,11 +47,14 @@ public class User {
     private List<Role> roles;
 
 //    test
-    public User(String lastname, String firstname, String email, String country, String password, String confirmPassword) {
+    public User(String lastname, String firstname, String email, int street_number, String street_name, String zip_code, String country, String password, String confirmPassword) {
         this.roles = new ArrayList<Role>();
         this.lastname = lastname;
         this.firstname = firstname;
         this.email = email;
+        this.street_number = street_number;
+        this.street_name = street_name;
+        this.zip_code = zip_code;
         this.country = country;
         this.password = password;
         this.confirmPassword = confirmPassword;
@@ -54,7 +64,8 @@ public class User {
         this.roles = new ArrayList<Role>();
     }
 
-//Methodes pour creer et supprimer les roles
+
+    //Methodes pour creer et supprimer les roles
     public void addRole(Role role){
         this.roles.add(role);
     }
@@ -125,5 +136,29 @@ public class User {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public int getStreet_number() {
+        return street_number;
+    }
+
+    public void setStreet_number(int street_number) {
+        this.street_number = street_number;
+    }
+
+    public String getStreet_name() {
+        return street_name;
+    }
+
+    public void setStreet_name(String street_name) {
+        this.street_name = street_name;
+    }
+
+    public String getZip_code() {
+        return zip_code;
+    }
+
+    public void setZip_code(String zip_code) {
+        this.zip_code = zip_code;
     }
 }

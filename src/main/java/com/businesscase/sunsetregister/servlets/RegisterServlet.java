@@ -40,11 +40,14 @@ public class RegisterServlet extends HttpServlet {
         String lastname = request.getParameter("lastname");
         String firstname = request.getParameter("firstname");
         String email = request.getParameter("email");
+        int street_number = Integer.valueOf(request.getParameter("streetNumber"));
+        String street_name = request.getParameter("streetName");
+        String code_zip = request.getParameter("codeZip");
         String country = request.getParameter("country");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
 
-        User user = new User(lastname, firstname, email, country, password, confirmPassword);
+        User user = new User(lastname, firstname, email, street_number, street_name, code_zip, country, password, confirmPassword);
 
         List<String> errorMessages = new ArrayList<>();
 

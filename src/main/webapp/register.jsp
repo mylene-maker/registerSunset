@@ -67,6 +67,20 @@
                                     <label class="form-label" for="email"></label>
                                 </div>
 
+                                <div class="form-outline ">
+                                    <input type="number" value="${saisie.getStreet_number()}" id="streetNumber" name="streetNumber" class="form-control form-control-lg" placeholder="Numéro de rue"/>
+                                    <label class="form-label" for="streetNumber"></label>
+                                </div>
+
+                                <div class="form-outline ">
+                                    <input type="text" value="${saisie.getStreet_name()}" id="streetName" name="streetName" class="form-control form-control-lg" placeholder="Nom de rue"/>
+                                    <label class="form-label" for="streetName"></label>
+                                </div>
+
+                                <div class="form-outline ">
+                                    <input type="number" value="${saisie.getZip_code()}" id="zipCode" name="zipCode" class="form-control form-control-lg" placeholder="Code postal"/>
+                                    <label class="form-label" for="zipCode"></label>
+                                </div>
 
                                 <div class="form-outline mb-4">
                                     <select id="country" name="country" class="form-select form-select">
