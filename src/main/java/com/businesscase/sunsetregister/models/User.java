@@ -3,6 +3,7 @@ package com.businesscase.sunsetregister.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +27,14 @@ public class User {
     @NotBlank(message = "Selectionner votre pays de résidence")
     private String country;
 
-//    @NotBlank(message= "Entrez le numero de rue")
+    @Basic
+    @NotNull(message= "Entrez le numero de rue")
     private int street_number;
-
+    @Basic
     @NotBlank(message= "Entrez le nom de la rue")
     private String street_name;
-
-//    @NotBlank(message= "Entrez le code postal")
+    @Basic
+    @NotBlank(message= "Entrez le code postal")
     private String zip_code;
     @NotBlank(message = "Indiquer un mot de passe")
 //    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$") //Minimum eight characters, at least one letter and one number
@@ -46,7 +48,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles;
 
-//    test
     public User(String lastname, String firstname, String email, int street_number, String street_name, String zip_code, String country, String password, String confirmPassword) {
         this.roles = new ArrayList<Role>();
         this.lastname = lastname;

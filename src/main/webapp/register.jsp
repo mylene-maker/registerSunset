@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div class="form-outline ">
-                                    <input type="number" value="${saisie.getZip_code()}" id="zipCode" name="zipCode" class="form-control form-control-lg" placeholder="Code postal"/>
+                                    <input type="text" value="${saisie.getZip_code()}" id="zipCode" name="zipCode" class="form-control form-control-lg" placeholder="Code postal"/>
                                     <label class="form-label" for="zipCode"></label>
                                 </div>
 

@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         int street_number = Integer.valueOf(request.getParameter("streetNumber"));
         String street_name = request.getParameter("streetName");
-        String code_zip = request.getParameter("codeZip");
+        String code_zip = request.getParameter("zipCode");
         String country = request.getParameter("country");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
