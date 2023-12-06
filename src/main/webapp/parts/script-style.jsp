@@ -7,5 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link href="CSS/lib/bootstrap.min.css" rel="stylesheet"/>
+<link href="CSS/style.css" rel="stylesheet"/>
 <script src="JS/lib/bootstrap.bundle.min.js"></script>
 
